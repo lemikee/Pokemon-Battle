@@ -23,8 +23,7 @@ In addition, this project will include:
 • A production README
 
 ##Wireframes
-![Uploading Homepage.png…]()
-[Homepage](https://user-images.githubusercontent.com/77752575/132032022-eeecb821-ff38-4700-a193-0c1755e1cbec.png)
+[Link](https://user-images.githubusercontent.com/77752575/132032022-eeecb821-ff38-4700-a193-0c1755e1cbec.png)
 
 • Game controls will allow the user to select and attack or item for their pokemon. Additionally, it will allow them to play/pause music and exit/reset the game.
 • Horizontally adjacent to each Pokemon there will be stats that display that Pokemon's name, level, and health.

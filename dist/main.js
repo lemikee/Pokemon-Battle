@@ -13,9 +13,9 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZXNDb250ZW50IjpbIiJdLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
+eval("var artists = __webpack_require__(Object(function webpackMissingModule() { var e = new Error(\"Cannot find module '/src/scripts/data'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\n\nvar PlayerSelect = __webpack_require__(Object(function webpackMissingModule() { var e = new Error(\"Cannot find module '/src/scripts/player_select'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));\n\ndocument.addEventListener('DOMContentLoaded', function () {\n  console.log('DOM is now fully loaded.');\n  var ulPlayerSelect = document.getElementById(\"ul-player-select\");\n  var playerSelect = new PlayerSelect(ulPlayerSelect, artists);\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJtYXBwaW5ncyI6IkFBQUEsSUFBTUEsT0FBTyxHQUFHQyxtQkFBTyxDQUFDLGdKQUFELENBQXZCOztBQUNBLElBQU1DLFlBQVksR0FBR0QsbUJBQU8sQ0FBQyx5SkFBRCxDQUE1Qjs7QUFFQUUsUUFBUSxDQUFDQyxnQkFBVCxDQUEwQixrQkFBMUIsRUFBOEMsWUFBTTtBQUNoREMsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVksMEJBQVo7QUFDQSxNQUFNQyxjQUFjLEdBQUdKLFFBQVEsQ0FBQ0ssY0FBVCxDQUF3QixrQkFBeEIsQ0FBdkI7QUFDQSxNQUFNQyxZQUFZLEdBQUcsSUFBSVAsWUFBSixDQUFpQkssY0FBakIsRUFBaUNQLE9BQWpDLENBQXJCO0FBRUgsQ0FMRCIsInNvdXJjZXMiOlsid2VicGFjazovL3Bva2Vtb24tYmF0dGxlLy4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgYXJ0aXN0cyA9IHJlcXVpcmUoJy9zcmMvc2NyaXB0cy9kYXRhJyk7XG5jb25zdCBQbGF5ZXJTZWxlY3QgPSByZXF1aXJlKCcvc3JjL3NjcmlwdHMvcGxheWVyX3NlbGVjdCcpXG5cbmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCAoKSA9PiB7XG4gICAgY29uc29sZS5sb2coJ0RPTSBpcyBub3cgZnVsbHkgbG9hZGVkLicpO1xuICAgIGNvbnN0IHVsUGxheWVyU2VsZWN0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJ1bC1wbGF5ZXItc2VsZWN0XCIpO1xuICAgIGNvbnN0IHBsYXllclNlbGVjdCA9IG5ldyBQbGF5ZXJTZWxlY3QodWxQbGF5ZXJTZWxlY3QsIGFydGlzdHMpXG5cbn0pOyJdLCJuYW1lcyI6WyJhcnRpc3RzIiwicmVxdWlyZSIsIlBsYXllclNlbGVjdCIsImRvY3VtZW50IiwiYWRkRXZlbnRMaXN0ZW5lciIsImNvbnNvbGUiLCJsb2ciLCJ1bFBsYXllclNlbGVjdCIsImdldEVsZW1lbnRCeUlkIiwicGxheWVyU2VsZWN0Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
@@ -32,8 +32,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/make namespace object */
@@ -52,9 +73,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	__webpack_modules__["./src/index.js"](0, {}, __webpack_require__);
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.scss"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.scss");
 /******/ 	
 /******/ })()
 ;

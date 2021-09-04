@@ -1,12 +1,13 @@
 {
   "name": "pokemon-battle",
   "version": "1.0.0",
-  "description": "",
+  "description": "This game allows you battle Pokemon one-on-one, just like you did growing up!",
   "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch --mode=development",
-    "build": "webpack --mode=production"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lemikee/Pokemon-Battle/issues"
+    "url": "https://github.com/lemikee/Pokemon-Battle"
   },
   "homepage": "https://github.com/lemikee/Pokemon-Battle#readme",
   "dependencies": {
@@ -29,11 +30,7 @@
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.39.0",
     "sass-loader": "^12.1.0",
-    "webpack": "^5.52.0",
+    "webpack": "^5.51.2",
     "webpack-cli": "^4.8.0"
-  },
-  
-  "browserslist": [
-    "defaults"
-  ]
+  }
 }

@@ -37,7 +37,7 @@ In addition, this project will include: <br />
 • npm to manage project dependencies
 
 ## Implementation Timeline
-• **Friday Afternoon & Weekend**: Draft project UML and familiarize with Canvas API. Read over PokeAPI documentation Get Canvas up and running and create the Game, Pokemon, and Attack classes. Be able to render Pokemon on the screen in the correct positions.
+• **Friday Afternoon & Weekend**: Draft project UML and familiarize with Canvas API. Read over PokeAPI documentation. Get Canvas up and running and create the Game, Pokemon, and Attack classes. Be able to render Pokemon on the screen in the correct positions.
 
 • **Monday**: Mildly Panic. Make sure that Pokemon each Pokemon has the correct attacks available to the user and that Pokemon can attack each other.
 

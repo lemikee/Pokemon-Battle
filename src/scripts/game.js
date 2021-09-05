@@ -37,4 +37,15 @@ for (i = 0; i < 4; i++) {
   addHandler(btn, move, player, opponent);
 }
 
+function hasWon(hp) {
+  let fainted = (player.hp <= 0) ? player : (opponent.hp <= 0) ? opponent : false;
+
+  if (fainted != false) {
+    alert('Its over: ' + fainted.name + ' fainted!');
+    document.getElementById(hp).innerHTML = '<p>HP: 0/' + f.fullhp + '</p>';
+    setTimeout(function () {
+      location.reload();
+    }, 500);
+  }
+
 }

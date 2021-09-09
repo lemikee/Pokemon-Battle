@@ -87,8 +87,12 @@ export default class Game {
     let fainted = (this.playerMonster.hp <= 0) ? this.playerMonster : (this.opponentMonster.hp <= 0) ? this.opponentMonster : false; // if playerMonster health is less than 0, f = playerMonster, else if opponentMonster;s health is less than 0, f = false
 
     if (fainted != false) { // if condition is true, their pokemon has fainted and they lose! so we alert them that the game is over
-      alert('Game Over: ' + fainted.name + ' fainted!\n' + '\nPress OK to Play Again!');
       document.getElementById(hp).innerHTML = '<p>0/' + fainted.fullhp + '</p>';
+      console.log("hello world");
+
+      setTimeout(`alert('Game Over: ' + fainted.name + ' fainted!\n' + '\nPress OK to Play Again!')`, 1000);
+
+      // alert('Game Over: ' + fainted.name + ' fainted!\n' + '\nPress OK to Play Again!');
       setTimeout(function () {
         location.reload();
       }, 500);

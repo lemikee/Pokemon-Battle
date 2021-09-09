@@ -53,9 +53,9 @@ export default class Game {
         btn.addEventListener('click', function (e) { // if we click on button element, do anonymous function (which calls attack)
           that.attack(move, mon1, mon2, 'opponent-health', ''); // do an attack
           slash = document.getElementById("player-slash");
-          slash.setAttribute("src", "./src/images/interface/slash.gif");
+          // slash.setAttribute("src", "./src/images/interface/slash.gif");
           // slash.setAttribute("type", "hidden");
-          console.log("hello world")
+          // console.log("hello world")
           let func = that.attack.bind(that);
           setTimeout(func, 2500, mon2.moves[Math.floor(Math.random() * 3)], mon2, mon1, 'player-health', 'Opponent '); // opponent will attack 2 seconds after we make select a move
         });

@@ -201,20 +201,20 @@ body {
 
 #health1 {
   position: absolute;
+  width: 73px;
+  height: 12px;
+  top: 173px;
+  right: 6.75px;
+}
+
+#health2 {
+  position: absolute;
   width: 79px;
   height: 12px;
   top: 75px;
   left: 78px;
 }
 
-#health2 {
-  position: absolute;
-  width: 73px;
-  height: 12px;
-  top: 173px;
-  right: 6.75px;
-
-}
 
 #instructions {
   line-height: 20px;

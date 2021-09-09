@@ -12,21 +12,26 @@ export default class Game {
 
   start() {
     let that = this;
+    let playerLevel = Math.floor(Math.random() * (58) + 12) // just generates random level for asthetics, doesn't correspond to difficult change yet
     this.playerMonster = this.generate(true); // true means our/player pokemon
     let playerAvatar = document.createElement('img'); //creates img element
     playerAvatar.src = this.playerMonster.sprite; //sets source of img element above we created to pokemon's sprite/gif
     document.getElementById('player-mon').appendChild(playerAvatar); //appends the image to playerMonster, element in our table
     document.getElementById('player-health').innerHTML = '<p>' + this.playerMonster.hp + ' ' + this.playerMonster.fullhp + '</p>'; // appends hp to our player-health element in our table
     document.getElementById('player-name').innerHTML = this.playerMonster.name;
+    document.getElementById('player-level').innerHTML = playerLevel;
+
     let healthPlayer = document.getElementById("health1");
     healthPlayer.value = this.playerMonster.hp;
 
     this.opponentMonster = this.generate(false); //creates opponent pokemon, false indicates opponent pokemon
+    let opponentLevel = Math.floor(Math.random() * (58) + 12); // just generates random level, doesn't correspond to difficult change yet
     let opponentAvatar = document.createElement('img');
     opponentAvatar.src = this.opponentMonster.sprite;
     document.getElementById('opponent-mon').appendChild(opponentAvatar);
     document.getElementById('opponent-health').innerHTML = '<p>' + this.opponentMonster.hp + ' ' + this.opponentMonster.fullhp + '</p>';
     document.getElementById('opponent-name').innerHTML = this.opponentMonster.name;
+    document.getElementById('opponent-level').innerHTML = opponentLevel;
     let healthOpponent = document.getElementById("health2");
     healthOpponent.value = this.opponentMonster.hp;
 

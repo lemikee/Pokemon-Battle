@@ -28,10 +28,11 @@
 }
 
 .welcome {
-  top: 95px;
+  top: 65px;
   color: black;
   text-align: left;
   font-family: 'Press Start 2P', cursive;
+  line-height: 45px;;
   background-color: gray;
   left: 50%;
   transform: translateX(-50%);
@@ -226,7 +227,7 @@ body {
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
   padding-bottom: 20px;
-  p { // any p inside of instructions has this property
+  p { // any p inside of instructions has these property
     text-align: center;
     width: 700px;
     border: 1px solid;
@@ -297,18 +298,48 @@ body {
   height: 10px;
 }
 
-#music {
+#player-level-container {
+  width: 10px;
+  height: 10px;
+  p { // any p inside of instructions has this property
+  color: #494949;
+  font-weight: lighter;
+  display: inline-block;
+  transform: scale(0.85, 1.40);
+  }
+}
+
+#player-level {
   position: absolute;
-  top: 59px;
-  left: 20px;
-
-
+  top: 159.5px;
+  right: 2px;
+  font-size: 8px;
+  font-family: 'Press Start 2P', cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
+
 }
-.music {
+
+#opponent-level-container {
+  width: 10px;
+  height: 10px;
+  p { // any p inside of instructions has this property
+  color: #494949;
+  font-weight: lighter;
+  display: inline-block;
+  transform: scale(1, 1.2);
+  }
+}
+
+#opponent-level {
   position: absolute;
-  border: solid 1px;
-  border-radius: 5px;
-  right: 0;
+  top: 61.5px;
+  left: 148px;
+  font-size: 8.55px;
+  font-family: 'Press Start 2P', cursive;
+  display: flex; //enters into flex systems, then can do justify content etc
+  justify-content: center;
+
+
 }
+

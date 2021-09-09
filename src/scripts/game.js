@@ -12,7 +12,7 @@ export default class Game {
 
   start() {
     let that = this;
-    let playerLevel = Math.floor(Math.random() * (58) + 12); // just generates random level for asthetics, doesn't correspond to difficult change yet
+    let playerLevel = Math.floor(Math.random() * (32) + 12); // just generates random level for asthetics, doesn't correspond to difficult change yet
     this.playerMonster = this.generate(true); // true means our/player pokemon
     let playerAvatar = document.createElement('img'); //creates img element
     playerAvatar.src = this.playerMonster.sprite; //sets source of img element above we created to pokemon's sprite/gif

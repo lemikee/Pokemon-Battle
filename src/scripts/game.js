@@ -11,6 +11,7 @@ export default class Game {
   }
 
   start() {
+    console.log("test5")
     let that = this;
     let playerLevel = Math.floor(Math.random() * (32) + 12); // just generates random level for asthetics, doesn't correspond to difficult change yet
     this.playerMonster = this.generate(true); // true means our/player pokemon
@@ -50,7 +51,7 @@ export default class Game {
       // });
 
       function addHandler(btn, move, mon1, mon2) { // external function will pass in external params to our event listener
-        btn.addEventListener('click', function (e) { // if we click on button element, do anonymous function (which calls attack)
+        btn.addEventListener('click', (e) => { // if we click on button element, do anonymous function (which calls attack)
           that.attack(move, mon1, mon2, 'opponent-health', ''); // do an attack
           slash = document.getElementById("player-slash");
           // slash.setAttribute("src", "./src/images/interface/slash.gif");
@@ -86,16 +87,22 @@ export default class Game {
   gameOver(hp) { // checks if there is a winner ie a pokemon has fainted, hp is the id of hp of the element that contains the pokemon's health
     let fainted = (this.playerMonster.hp <= 0) ? this.playerMonster : (this.opponentMonster.hp <= 0) ? this.opponentMonster : false; // if playerMonster health is less than 0, f = playerMonster, else if opponentMonster;s health is less than 0, f = false
 
+
+    // let gamePrompt = that.attack.bind(that);
+
+
     if (fainted != false) { // if condition is true, their pokemon has fainted and they lose! so we alert them that the game is over
       document.getElementById(hp).innerHTML = '<p>0/' + fainted.fullhp + '</p>';
-      console.log("hello world");
 
-      setTimeout(`alert('Game Over: ' + fainted.name + ' fainted!\n' + '\nPress OK to Play Again!')`, 1000);
+      alert('Game Over: ' + fainted.name + ' fainted!\n' + '\nPress OK to Play Again!')
 
-      // alert('Game Over: ' + fainted.name + ' fainted!\n' + '\nPress OK to Play Again!');
-      setTimeout(function () {
+      // setTimeout(function () {
+      //   alert("Game Over: " + fainted.name + " fainted!\n" + "\nPress OK to Play Again!");
+      // }, 5000);
+
+      setTimeout(() => {
         location.reload();
-      }, 500);
+      }, 900);
     }
 
   }
@@ -125,19 +132,19 @@ export default class Game {
           switch (i) {
             case 0: // first case, receiver pokemon is immune to the attack
               scale = 0;
-              setTimeout(function () {
+              setTimeout(() => {
                 document.getElementById('commentary').innerHTML = '<p>It had no effect!</p>';
               }, 1000);
               break;
             case 1: // second case, the receiver is weak against the attack
               scale = 2;
-              setTimeout(function () {
+              setTimeout(() => {
                 document.getElementById('commentary').innerHTML = '<p>It was super effective!</p>';
               }, 1000);
               break;
             case 2: // third cased, the receiver is resistant to the sttack
               scale = 0.5;
-              setTimeout(function () {
+              setTimeout(() => {
                 document.getElementById('commentary').innerHTML = '<p>It was not very effective!</p>';
               }, 1000);
               break;
@@ -160,7 +167,7 @@ export default class Game {
       health.value = Math.floor(receiver.hp / receiver.fullhp * 100);
     }
     else { // else, the attack type is not included in one of the three cases above, then we will say that the attack missed
-      setTimeout(function () {
+      setTimeout(() => {
         document.getElementById('commentary').innerHTML = '<p>Attack missed!</p>';
       });
     }

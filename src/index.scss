@@ -287,9 +287,14 @@ body {
 }
 
 
-.sound{
-  width: 10px;
-  height: 10px;
+// .sound{
+//   width: 10px;
+//   height: 10px;
+// }
+
+#sound-toggle {
+  background-color: transparent;
+  border-color: transparent;
 }
 
 #player-level-container {

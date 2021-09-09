@@ -108,7 +108,7 @@ body {
 }
 
 .screen {
-  // background-color: blue;
+
   padding: 5px;
   margin-top: 230px;
   background-image: url('../src/images/levels/arena-forrest.jpg');
@@ -116,11 +116,8 @@ body {
   width: 590px;
   border-radius: 10px;
   height: 325px;
-  // text-align: center;
-
   background-size: 100%;
   position: relative;
-
 }
 
 .attack-buttons {
@@ -134,9 +131,6 @@ body {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-
-
-
 }
 
 #m0 {
@@ -270,7 +264,7 @@ body {
 #player-name {
   position: absolute;
   top: 158.5px;
-  right: 50px;
+  right: 48.5px;
   font-size: 10px;
   font-family: 'Press Start 2P', cursive;
   display: flex; //enters into flex systems, then can do justify content etc
@@ -284,7 +278,7 @@ body {
 
 #opponent-name {
   position: absolute;
-  top: 59px;
+  top: 61px;
   left: 20px;
   font-size: 10px;
   font-family: 'Press Start 2P', cursive;

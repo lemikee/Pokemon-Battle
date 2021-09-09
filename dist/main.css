@@ -263,7 +263,7 @@ body {
 #player-name {
   position: absolute;
   top: 158.5px;
-  right: 50px;
+  right: 48.5px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;
   display: flex;
@@ -277,7 +277,7 @@ body {
 
 #opponent-name {
   position: absolute;
-  top: 59px;
+  top: 61px;
   left: 20px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;

@@ -5,7 +5,7 @@ import typeMatch from './typeMatch';
 
 export default class Game {
   constructor() {
-    
+
     this.playerMonster = null;
     this.opponentMonster = null;
   }
@@ -126,7 +126,7 @@ export default class Game {
 
       if (receiver === this.playerMonster) {
         health = document.getElementById("health1");
-        console.log("health1")
+        // console.log("health1")
 
       } else {
         health = document.getElementById("health2");

@@ -55,7 +55,7 @@
 
 
       <div class="attack-buttons">
-        <img class="background-buttons" src="../src/images/interface/menu_box_overview.jpg">
+        <img class="background-buttons" src="./src/images/interface/menu_box_overview.jpg">
         <input type='button' class='btn' id='m0'>
         <input type='button' class='btn' id='m1'>
         <input type='button' class='btn' id='m2'>
@@ -77,10 +77,10 @@
       </div>
 
       <div id="player-stats">
-        <img class="player-hp" src="../src/images/interface/player_stats.png">
+        <img class="player-hp" src="./src/images/interface/player_stats.png">
       </div>
       <div id="opponent-stats">
-        <img class="opponent-hp" src="../src/images/interface/opponent_stats.png">
+        <img class="opponent-hp" src="./src/images/interface/opponent_stats.png">
       </div>
 
       <progress id="health1" value="100" max="100"></progress>
@@ -101,7 +101,7 @@
       button to make a move. Your opponent will attack two seconds after you. The game will
       announce a play by play of the battle including the effectiveness of each attack! <br> <br>
 
-      Created by:
+      Created by: Mike Le
     </p>
 
   </div>
@@ -127,7 +127,7 @@
 
   function togglePlay() {
     var sound = document.querySelector(".fas fa-volume-up");
-    console.log(sound)
+    // console.log(sound)
     // sound.className = "fas fa-volume-mute";
     return myAudio.paused ? myAudio.play() : myAudio.pause();
   };

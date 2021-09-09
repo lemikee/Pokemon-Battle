@@ -50,7 +50,7 @@
   position: absolute;
   width: 115px;
   height: 25px;
-  font-size: 9px;
+  font-size: 10.5px;
 }
 
 .hp {
@@ -173,7 +173,7 @@ body {
 
 #opponent {
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: 420px;
 }
 
@@ -252,4 +252,54 @@ body {
   top: 80px;
   left: 10px;
   font-size: 10px;
+}
+
+#player-name-container {
+  width: 10px;
+  height: 10px;
+}
+
+#player-name {
+  position: absolute;
+  top: 158.5px;
+  right: 50px;
+  font-size: 10px;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: center;
+}
+
+#opponent-name-container {
+  width: 10px;
+  height: 10px;
+}
+
+#opponent-name {
+  position: absolute;
+  top: 59px;
+  left: 20px;
+  font-size: 10px;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  justify-content: center;
+}
+
+.sound {
+  width: 10px;
+  height: 10px;
+}
+
+#music {
+  position: absolute;
+  top: 59px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.music {
+  position: absolute;
+  border: solid 1px;
+  border-radius: 5px;
+  right: 0;
 }

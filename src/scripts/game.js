@@ -17,6 +17,7 @@ export default class Game {
     playerAvatar.src = this.playerMonster.sprite; //sets source of img element above we created to pokemon's sprite/gif
     document.getElementById('player-mon').appendChild(playerAvatar); //appends the image to playerMonster, element in our table
     document.getElementById('player-health').innerHTML = '<p>' + this.playerMonster.hp + ' ' + this.playerMonster.fullhp + '</p>'; // appends hp to our player-health element in our table
+    document.getElementById('player-name').innerHTML = this.playerMonster.name;
     let healthPlayer = document.getElementById("health1");
     healthPlayer.value = this.playerMonster.hp;
 
@@ -25,6 +26,7 @@ export default class Game {
     opponentAvatar.src = this.opponentMonster.sprite;
     document.getElementById('opponent-mon').appendChild(opponentAvatar);
     document.getElementById('opponent-health').innerHTML = '<p>' + this.opponentMonster.hp + ' ' + this.opponentMonster.fullhp + '</p>';
+    document.getElementById('opponent-name').innerHTML = this.opponentMonster.name;
     let healthOpponent = document.getElementById("health2");
     healthOpponent.value = this.opponentMonster.hp;
 
@@ -72,7 +74,7 @@ export default class Game {
 
   }
 
-  checkWinner(hp) { // checks if there is a winner ie a pokemon has fainted, hp is the id of hp of the element that contains the pokemon's health
+  gameOver(hp) { // checks if there is a winner ie a pokemon has fainted, hp is the id of hp of the element that contains the pokemon's health
     let fainted = (this.playerMonster.hp <= 0) ? this.playerMonster : (this.opponentMonster.hp <= 0) ? this.opponentMonster : false; // if playerMonster health is less than 0, f = playerMonster, else if opponentMonster;s health is less than 0, f = false
     if (fainted != false) { // if condition is true, their pokemon has fainted and they lose! so we alert them that the game is over
       alert('Game Over: ' + fainted.name + ' fainted!');
@@ -139,7 +141,7 @@ export default class Game {
       });
     }
     // console.log(that);
-    that.checkWinner(hp); // after an attack has been made, let's check if there's a winner -- pokemon's heatlh is <= 0
+    that.gameOver(hp); // after an attack has been made, let's check if there's a winner -- pokemon's heatlh is <= 0
 
 
   }

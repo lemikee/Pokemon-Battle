@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="#"> <!-- temp fix: removes favicon.ico 404 error -->
   <script src="./dist/main.js"></script>
   <title>Pokemon Battle!</title>
 </head>
@@ -26,7 +27,7 @@
 
 
       <div class="attack-buttons">
-        <img class="background-buttons" src="./src/images/interface/menu_box_overview.jpg">
+        <img class="background-buttons" src="./src/images/interface/menu.jpg">
         <input type='button' class='btn' id='m0'>
         <input type='button' class='btn' id='m1'>
         <input type='button' class='btn' id='m2'>
@@ -34,12 +35,8 @@
         <div id='commentary'>Choose a move!</div> <!-- comment/message that appears announcing attacks -->
       </div>
 
-      <!-- <div class="player-health-bar"> -->
-      <!-- </div> -->
-      <!-- <div class="opponent-health-bar"> -->
-      <!-- </div> -->
-
-      <div id="opponent-hp-container"> <!-- we place here (temporary fix) so it doesn't show on screen like the real game -->
+      <div id="opponent-hp-container">
+        <!-- we place here (temporary fix) so it doesn't show on screen like the real game -->
         <p id='opponent-health'></p>
       </div>
 
@@ -52,19 +49,30 @@
       </div>
 
       <div id="player-stats">
-        <img class="player-hp" src="./src/images/interface/player_stats.png">
+        <img class="player-hp" src="./src/images/interface/player_hp.png">
       </div>
       <div id="opponent-stats">
-        <img class="opponent-hp" src="./src/images/interface/opponent_stats.png">
+        <img class="opponent-hp" src="./src/images/interface/opponent_hp.png">
       </div>
 
       <div id="player-hp-container">
         <p id='player-health'></p>
       </div>
 
+      <div id="opponent-name-container">
+        <p id='player-name'></p>
+      </div>
 
-      <progress id="health1" value="100" max="100"></progress>
-      <progress id="health2" value="100" max="100"></progress>
+      <div id="opponent-name-container">
+        <p id='opponent-name'></p>
+      </div>
+
+
+      <progress class="hp" id="health1" value="100" max="100"></progress>
+      <progress class="hp" id="health2" value="100" max="100"></progress>
+
+
+
     </div>
   </div>
 

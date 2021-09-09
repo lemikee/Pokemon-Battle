@@ -1,36 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/styles/reset.css" /> <!-- css reset -->
-    <link rel="stylesheet" href="./dist/main.css" />        <!-- main css file -->
-    <script src="./dist/main.js"></script>
-    <title>Pokemon Battle!</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/reset.css" />
+  <link rel="stylesheet" href="./dist/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="./dist/main.js"></script>
+  <title>Pokemon Battle!</title>
 </head>
+
 <body>
-    <table class='table'>
-        <tr>
-            <td id='hp1'></td>
-            <td id='hp2'></td>
-        </tr>
-        <tr>
-            <td id='pk1'></td>
-            <td id='pk2'></td>
-        </tr>
-        <tr>
-            <td colspan='2' id='comment'></td>
-        </tr>
-        <tr>
-            <td>
-                <input type='button' class='btn' id='m0'>
-                <input type='button' class='btn' id='m1'>
-                <input type='button' class='btn' id='m2'>
-                <input type='button' class='btn' id='m3'>
-            </td>
-        </tr>
-    </table>
+
+  <div class="welcome">
+    <h1">Welcome to Pokemon Battle!</h1>
+  </div>
+
+  <div class="gameboy">
+    <div class='screen'>
+
+
+
+
+
+      <div>
+        <p id='player-health'></p>
+      </div>
+
+      <div>
+        <p id='opponent-health'></p>
+      </div>
+
+      <div id="parent">
+        <div class="attacks top-two-attacks" id="left" style="text-align:center; width: 50%;">
+          <!-- buttons that consist of move options -->
+
+        </div>
+
+        <div class="attacks bottom-two-attacks" id="right" style="text-align:center; width: 50%;">
+          <!-- buttons that consist of move options -->
+          <!--
+            <input type='button' class='btn' id='m2'>
+            <input type='button' class='btn' id='m3'> -->
+          <!-- <button type="button" class='btn' id="item">Item</button> currently not implemented
+              <button type="button" class='btn' id="run">Run</button> currently not implemented -->
+        </div>
+
+      </div>
+
+
+      <div class="attack-buttons">
+        <img class="background-buttons" src="../src/images/interface/menu_box_overview.jpg">
+        <input type='button' class='btn' id='m0'>
+        <input type='button' class='btn' id='m1'>
+        <input type='button' class='btn' id='m2'>
+        <input type='button' class='btn' id='m3'>
+        <div id='commentary'></div> <!-- comment/message that appears announcing attacks -->
+      </div>
+
+      <!-- <div class="player-health-bar"> -->
+      <!-- </div> -->
+      <!-- <div class="opponent-health-bar"> -->
+      <!-- </div> -->
+
+      <div id="player">
+        <div id='player-mon'></div> <!-- player pokemon sprite/gif -->
+      </div>
+
+      <div id="opponent">
+        <div id='opponent-mon'></div> <!-- computer pokemon sprite/gif -->
+      </div>
+
+      <div id="player-stats">
+        <img class="player-hp" src="../src/images/interface/player_stats.png">
+      </div>
+      <div id="opponent-stats">
+        <img class="opponent-hp" src="../src/images/interface/opponent_stats.png">
+      </div>
+
+      <progress id="health1" value="100" max="100"></progress>
+      <progress id="health2" value="100" max="100"></progress>
+    </div>
+  </div>
+
+
+  <div id="instructions">
+    <p>
+      Welcome Pokemon Trainer! Your adventure begins now! <br> <br>
+
+      About: Pokemon Battle! is a turn based strategy game that recreates the fun
+      you had playing Pokemon growing up! Use your knowledge of type weakness and battle
+      mechanics to win. <br> <br>
+
+      Instructions: Each button corresponds to an attack of a specifc type. Click on a
+      button to make a move. Your opponent will attack two seconds after you. The game will
+      announce a play by play of the battle including the effectiveness of each attack! <br> <br>
+
+      Created by:
+    </p>
+
+  </div>
+  <nav class="links">
+    <audio id="myAudio" src="./src/sound/battle_trainer.mp3">
+      <!-- audio button -->
+    </audio>
+    <a onClick="togglePlay()">
+      <button>
+        <i class="fas fa-volume-up"></i></i>
+      </button>
+    </a>
+
+
+    <a href="https://github.com/lemikee"> <i class="fab fa-github social-media"></i></i></a>
+    <a href="https://www.linkedin.com/in/mike-le/"> <i class="fab fa-linkedin social-media"></i></i></a>
+  </nav>
 
 </body>
+
+<script>
+  var myAudio = document.getElementById("myAudio");
+
+  function togglePlay() {
+    var sound = document.querySelector(".fas fa-volume-up");
+    console.log(sound)
+    // sound.className = "fas fa-volume-mute";
+    return myAudio.paused ? myAudio.play() : myAudio.pause();
+  };
+</script>
+
 </html>

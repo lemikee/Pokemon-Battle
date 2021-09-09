@@ -1,9 +1,227 @@
-// const artists = require('/src/scripts/data');
-// const PlayerSelect = require('/src/scripts/player_select')
 
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log('DOM is now fully loaded.');
-//     const ulPlayerSelect = document.getElementById("ul-player-select");
-//     const playerSelect = new PlayerSelect(ulPlayerSelect, artists)
+#player-health {
+  font-family: 'Press Start 2P', cursive;
+}
 
-// });
+#opponent-health {
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+.attacks {
+
+  justify-content: center; /* horizontal */
+  align-items: center; /* vertical */
+  margin: 0 auto;
+  display: block;
+}
+
+.gameboy {
+  background-image: url("../src/images/gameboy/switch.png");
+  background-repeat: no-repeat;
+  background-size: 1800px;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  height: 625px;
+}
+
+.welcome {
+  top: 95px;
+  color: black;
+  text-align: left;
+  font-family: 'Press Start 2P', cursive;
+  background-color: gray;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+}
+
+.btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    font-size: 12px;
+
+}
+
+.hp {
+  display:inline-block
+}
+
+#social-media {
+  color: black;
+}
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+#left {
+
+  width: 50px;
+}
+
+#right {
+
+  width: 20%;
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 35px;
+  background-color: gray;
+}
+.social-media{
+    float:center;
+    margin-left:50px;
+}
+
+.health-bar {
+  margin-left: 125px;
+  z-index: 1 !important;
+}
+
+body {
+  background-color: gray;
+}
+
+.screen {
+  // background-color: blue;
+  padding: 5px;
+  margin-top: 230px;
+  background-image: url('../src/images/levels/arena-forrest.jpg');
+  background-repeat: no-repeat;
+  width: 590px;
+  border-radius: 10px;
+  height: 325px;
+  // text-align: center;
+
+  background-size: 100%;
+  position: relative;
+
+}
+
+.attack-buttons {
+  position: absolute;
+  bottom: 15px;
+  // background-color: blue;
+  height: 100px;
+  left: 5px;
+  right: 5px;
+  // background-image: url('../src/images/interface/menu_box_overview.jpg');
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+#m0 {
+  top: 15px;
+  left: 301px;
+}
+#m1 {
+  top: 15px;
+  left: 435px;
+}
+#m2 {
+  top: 55px;
+  left: 301px;
+}
+#m3 {
+  top: 55px;
+  left: 435px;
+}
+
+.background-buttons {
+  border-radius: 10px;
+  position: absolute;
+}
+
+#commentary {
+  position: absolute;
+  width: 185px;
+  height: 55px;
+  top: 25px;
+  left: 75px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#player {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+}
+
+#opponent {
+  position: absolute;
+  top: 60px;
+  left: 420px;
+}
+
+#opponent-stats {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+#player-stats {
+  position: absolute;
+  top: 150px;
+  right: 0;
+}
+
+.player-hp {
+  width: 175px;
+}
+
+.opponent-hp {
+  width: 190px;
+}
+
+#health1 {
+  position: absolute;
+  width: 77px;
+  height: 12px;
+  top: 75px;
+  left: 79px;
+}
+
+#health2 {
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  top: 150px;
+  right: 0;
+
+}
+
+#instructions {
+  line-height: 20px;
+  font-size: 12px;
+  display: flex; //enters into flex systems, then can do justify content etc
+  justify-content: center;
+  padding-bottom: 20px;
+  p { // any p inside of instructions has this property
+    text-align: center;
+    width: 700px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: white;
+    padding: 15px;
+    font-family: 'Press Start 2P', cursive;
+  }
+}

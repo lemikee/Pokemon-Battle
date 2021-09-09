@@ -118,6 +118,7 @@ body {
   height: 325px;
   background-size: 100%;
   position: relative;
+  margin-right: 5px;
 }
 
 .attack-buttons {
@@ -333,7 +334,34 @@ body {
   font-family: 'Press Start 2P', cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
-
-
 }
 
+#player-slash-container {
+  width: 10px;
+  height: 10px;
+}
+
+#player-slash {
+  position: absolute;
+  top: 61px;
+  left: 20px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
+  display: flex; //enters into flex systems, then can do justify content etc
+  justify-content: center;
+}
+
+#opponent-slash-constainer {
+  width: 10px;
+  height: 10px;
+}
+
+#opponent-slash {
+  position: absolute;
+  top: 61px;
+  left: 20px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
+  display: flex; //enters into flex systems, then can do justify content etc
+  justify-content: center;
+}

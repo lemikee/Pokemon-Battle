@@ -11,9 +11,9 @@ let opponentList = [
     ['Bubble punch', 'ice', 40, 0.95],
     ['Flash cannon', 'steel', 48, 0.95]
   ]],
-  ['Gyarados', 'src/images/gyarados.gif', 364, [
+  ['Gyarados', './src/images/gyarados.gif', 364, [
     ['Blizzard', 'grass', 50, 0.95],
-    ['Surf', 'poison', 50, 0.95],
+    ['Surf', 'water', 50, 0.95],
     ['Hydro Pump', 'ground', 55, 0.95],
     ['Tackle', 'normal', 48, 0.95]
   ]]

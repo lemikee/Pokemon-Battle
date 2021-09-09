@@ -1,5 +1,5 @@
 let typeMatch = { // first element is immunity, second is weakness, third is resistance
-  'Glitch': [['ground'], ['water', 'rock'], ['fire', 'grass', 'steel']],
+  'Gyarados': [['ground'], ['water', 'rock'], ['fire', 'grass', 'steel']],
   'Blastoise': [[''], ['grass'], ['fire', 'water']],
   'Venusaur': [['poison'], ['fire', 'fly', 'ice', 'steel'], ['grass', 'water']],
   'Charmander': [['ground'], ['water', 'rock'], ['fire', 'grass', 'steel']],

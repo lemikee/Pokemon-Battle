@@ -25,48 +25,23 @@
     <div class='screen'>
 
 
-
-
-
-      <div>
-        <p id='player-health'></p>
-      </div>
-
-      <div>
-        <p id='opponent-health'></p>
-      </div>
-
-      <div id="parent">
-        <div class="attacks top-two-attacks" id="left" style="text-align:center; width: 50%;">
-          <!-- buttons that consist of move options -->
-
-        </div>
-
-        <div class="attacks bottom-two-attacks" id="right" style="text-align:center; width: 50%;">
-          <!-- buttons that consist of move options -->
-          <!--
-            <input type='button' class='btn' id='m2'>
-            <input type='button' class='btn' id='m3'> -->
-          <!-- <button type="button" class='btn' id="item">Item</button> currently not implemented
-              <button type="button" class='btn' id="run">Run</button> currently not implemented -->
-        </div>
-
-      </div>
-
-
       <div class="attack-buttons">
         <img class="background-buttons" src="./src/images/interface/menu_box_overview.jpg">
         <input type='button' class='btn' id='m0'>
         <input type='button' class='btn' id='m1'>
         <input type='button' class='btn' id='m2'>
         <input type='button' class='btn' id='m3'>
-        <div id='commentary'></div> <!-- comment/message that appears announcing attacks -->
+        <div id='commentary'>Choose a move!</div> <!-- comment/message that appears announcing attacks -->
       </div>
 
       <!-- <div class="player-health-bar"> -->
       <!-- </div> -->
       <!-- <div class="opponent-health-bar"> -->
       <!-- </div> -->
+
+      <div id="opponent-hp-container"> <!-- we place here (temporary fix) so it doesn't show on screen like the real game -->
+        <p id='opponent-health'></p>
+      </div>
 
       <div id="player">
         <div id='player-mon'></div> <!-- player pokemon sprite/gif -->
@@ -82,6 +57,11 @@
       <div id="opponent-stats">
         <img class="opponent-hp" src="./src/images/interface/opponent_stats.png">
       </div>
+
+      <div id="player-hp-container">
+        <p id='player-health'></p>
+      </div>
+
 
       <progress id="health1" value="100" max="100"></progress>
       <progress id="health2" value="100" max="100"></progress>
@@ -111,13 +91,13 @@
     </audio>
     <a onClick="togglePlay()">
       <button>
-        <i class="fas fa-volume-up"></i></i>
+        <i class="fas fa-volume-up fa-3x"></i></i>
       </button>
     </a>
 
 
-    <a href="https://github.com/lemikee"> <i class="fab fa-github social-media"></i></i></a>
-    <a href="https://www.linkedin.com/in/mike-le/"> <i class="fab fa-linkedin social-media"></i></i></a>
+    <a href="https://github.com/lemikee"> <i class="fab fa-github fa-3x social-media github"></i></i></a>
+    <a href="https://www.linkedin.com/in/mike-le/"> <i class="fab fa-3x fa-linkedin social-media linkedin"></i></i></a>
   </nav>
 
 </body>

@@ -46,9 +46,9 @@
     background-color: transparent;
     font-family: 'Press Start 2P', cursive;
     position: absolute;
-    width: 100px;
+    width: 115px;
     height: 25px;
-    font-size: 12px;
+    font-size: 9px;
 
 }
 
@@ -83,8 +83,18 @@
   background-color: gray;
 }
 .social-media{
-    float:center;
-    margin-left:50px;
+  float:center;
+  margin-left:50px;
+  font-size: 50px;
+}
+
+.github {
+  color: black;
+}
+
+.linkedin {
+  color: #0e76a8;
+  // background-color: white;
 }
 
 .health-bar {
@@ -125,23 +135,24 @@ body {
   justify-content: center;
 
 
+
 }
 
 #m0 {
   top: 15px;
-  left: 301px;
+  left: 300px;
 }
 #m1 {
   top: 15px;
-  left: 435px;
+  left: 425px;
 }
 #m2 {
-  top: 55px;
-  left: 301px;
+  top: 57px;
+  left: 300px;
 }
 #m3 {
-  top: 55px;
-  left: 435px;
+  top: 57px;
+  left: 425px;
 }
 
 .background-buttons {
@@ -194,18 +205,18 @@ body {
 
 #health1 {
   position: absolute;
-  width: 77px;
+  width: 79px;
   height: 12px;
   top: 75px;
-  left: 79px;
+  left: 78px;
 }
 
 #health2 {
   position: absolute;
-  width: 25px;
-  height: 20px;
-  top: 150px;
-  right: 0;
+  width: 73px;
+  height: 12px;
+  top: 173px;
+  right: 6.75px;
 
 }
 
@@ -224,4 +235,28 @@ body {
     padding: 15px;
     font-family: 'Press Start 2P', cursive;
   }
+}
+
+#player-hp-container {
+  width: 5px;
+  height: 5px;
+}
+
+#player-health {
+  position: absolute;
+  top: 189px;
+  right: 6px;
+  font-size: 9.5px;
+}
+
+#opponent-hp-container {
+  width: 5px;
+  height: 5px;
+}
+
+#opponent-health {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  font-size: 10px;
 }

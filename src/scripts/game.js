@@ -16,7 +16,7 @@ export default class Game {
     let playerAvatar = document.createElement('img'); //creates img element
     playerAvatar.src = this.playerMonster.sprite; //sets source of img element above we created to pokemon's sprite/gif
     document.getElementById('player-mon').appendChild(playerAvatar); //appends the image to playerMonster, element in our table
-    document.getElementById('player-health').innerHTML = '<p>HP: ' + this.playerMonster.hp + '/' + this.playerMonster.fullhp + '</p>'; // appends hp to our player-health element in our table
+    document.getElementById('player-health').innerHTML = '<p>' + this.playerMonster.hp + ' ' + this.playerMonster.fullhp + '</p>'; // appends hp to our player-health element in our table
     let healthPlayer = document.getElementById("health1");
     healthPlayer.value = this.playerMonster.hp;
 
@@ -24,7 +24,7 @@ export default class Game {
     let opponentAvatar = document.createElement('img');
     opponentAvatar.src = this.opponentMonster.sprite;
     document.getElementById('opponent-mon').appendChild(opponentAvatar);
-    document.getElementById('opponent-health').innerHTML = '<p>HP: ' + this.opponentMonster.hp + '/' + this.opponentMonster.fullhp + '</p>';
+    document.getElementById('opponent-health').innerHTML = '<p>' + this.opponentMonster.hp + ' ' + this.opponentMonster.fullhp + '</p>';
     let healthOpponent = document.getElementById("health2");
     healthOpponent.value = this.opponentMonster.hp;
 
@@ -44,7 +44,7 @@ export default class Game {
       function addHandler(btn, move, mon1, mon2) { // external function will pass in external params to our event listener
         btn.addEventListener('click', function (e) { // if we click on button element, do anonymous function (which calls attack)
           that.attack(move, mon1, mon2, 'opponent-health', ''); // do an attack
-          let func = that.attack.bind(that)
+          let func = that.attack.bind(that);
           setTimeout(func, 2000, mon2.moves[Math.floor(Math.random() * 3)], mon2, mon1, 'player-health', 'Opponent '); // opponent will attack 2 seconds after we make select a move
           // attack(move, attacker, receiver, hp, owner)
         });
@@ -76,7 +76,7 @@ export default class Game {
     let fainted = (this.playerMonster.hp <= 0) ? this.playerMonster : (this.opponentMonster.hp <= 0) ? this.opponentMonster : false; // if playerMonster health is less than 0, f = playerMonster, else if opponentMonster;s health is less than 0, f = false
     if (fainted != false) { // if condition is true, their pokemon has fainted and they lose! so we alert them that the game is over
       alert('Game Over: ' + fainted.name + ' fainted!');
-      document.getElementById(hp).innerHTML = '<p>HP: 0/' + f.fullhp + '</p>';
+      document.getElementById(hp).innerHTML = '<p>0/' + f.fullhp + '</p>';
       setTimeout(function () {
         location.reload();
       }, 1500);
@@ -121,7 +121,7 @@ export default class Game {
       }
       power *= scale; // varies pokemon attack's power
       receiver.hp -= Math.floor(power); // decreases health of receiver (pokemon being attacked)
-      document.getElementById(hp).innerHTML = '<p>HP: ' + receiver.hp + '/' + receiver.fullhp + '</p>';
+      document.getElementById(hp).innerHTML = '<p>' + receiver.hp + ' ' + receiver.fullhp + '</p>';
 
 
       if (receiver === this.playerMonster) {

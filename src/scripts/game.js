@@ -14,6 +14,7 @@ export default class Game {
     let playerLevel = Math.floor(Math.random() * 32 + 12); // just generates random level for asthetics, doesn't correspond to difficult change yet
     this.playerMonster = this.generate(true); // true means our/player pokemon
     let playerAvatar = document.createElement("img"); //creates img element
+    playerAvatar.id = "player-pokemon";
     playerAvatar.src = this.playerMonster.sprite; //sets source of img element above we created to pokemon's sprite/gif
     document.getElementById("player-mon").appendChild(playerAvatar); //appends the image to playerMonster, element in our table
     document.getElementById("player-health").innerHTML =
@@ -27,6 +28,7 @@ export default class Game {
     this.opponentMonster = this.generate(false); //creates opponent pokemon, false indicates opponent pokemon
     let opponentLevel = Math.floor(Math.random() * 58 + 12); // just generates random level, doesn't correspond to difficult change yet
     let opponentAvatar = document.createElement("img");
+    opponentAvatar.id = "opponent-pokemon";
     opponentAvatar.src = this.opponentMonster.sprite;
     document.getElementById("opponent-mon").appendChild(opponentAvatar);
     document.getElementById("opponent-health").innerHTML =
@@ -64,7 +66,6 @@ export default class Game {
             btn.disabled = true;
             setTimeout(() => {
               btn.disabled = false;
-              console.log("Button Activated 25");
             }, 3550);
           }
 
@@ -136,10 +137,28 @@ export default class Game {
   attack(move, attacker, receiver, hp, owner) {
     if (attacker === this.playerMonster) {
       let playerSlash = document.getElementById("opponent-slash");
+      let pokemon = document.getElementById("player");
+      moveAnimation(pokemon);
       slashAnimation(playerSlash);
     } else {
       let playerSlash = document.getElementById("player-slash");
+      let pokemon = document.getElementById("opponent");
+      moveAnimation(pokemon);
       slashAnimation(playerSlash);
+    }
+
+    function moveAnimation(pokemon) {
+      if (pokemon.id === "player") {
+        pokemon.style.left = "80px";
+        setTimeout(() => {
+          pokemon.style.left = "100px";
+        }, 135);
+      } else {
+        pokemon.style.left = "340px";
+        setTimeout(() => {
+          pokemon.style.left = "420px";
+        }, 135);
+      }
     }
 
     function slashAnimation(slash) {

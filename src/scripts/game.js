@@ -48,13 +48,6 @@ export default class Game {
       let move = this.playerMonster.moves[i]; // create variable for move for each button
       let mon1 = this.playerMonster;
       let mon2 = this.opponentMonster;
-      let slash;
-
-      // btn.addEventListener('click', function (e) {  // if we click on button element, do anonymous function (which calls attack)
-      // that.attack(move, mon1, mon2, 'opponent-health', ''); // do an attack
-      // setTimeout(that.attack, 2000, mon2.moves[Math.floor(Math.random() * 3)], mon1, mon2, 'player-health', 'Foe '); // opponent will attack 2 seconds after we make select a move
-      // mon1.hp += 10;
-      // });
 
       function addHandler(btn, move, mon1, mon2) {
         // external function will pass in external params to our event listener
@@ -62,36 +55,23 @@ export default class Game {
           // if we click on button element, do anonymous function (which calls attack)
           that.attack(move, mon1, mon2, "opponent-health", ""); // do an attack
 
-          let btn0 = document.getElementById("m0");
-          let btn1 = document.getElementById("m1");
-          let btn2 = document.getElementById("m2");
-          let btn3 = document.getElementById("m3");
-
-          btn0.disabled = true;
-          btn1.disabled = true;
-          btn2.disabled = true;
-          btn3.disabled = true;
-
-          pauseButton(btn0);
-          pauseButton(btn1);
-          pauseButton(btn2);
-          pauseButton(btn3);
+          for (let i = 0; i < 4; i++) {
+            let btn = document.getElementById("m" + i);
+            pauseButton(btn);
+          }
 
           function pauseButton(btn) {
             btn.disabled = true;
             setTimeout(() => {
               btn.disabled = false;
-              // console.log("Button Activated");
-            }, 3100);
+              console.log("Button Activated 25");
+            }, 3550);
           }
 
-          slash = document.getElementById("player-slash");
-          // slash.setAttribute("src", "./src/images/interface/slash.gif");
-          // slash.setAttribute("type", "hidden");
-          // console.log("hello world")
-          let func = that.attack.bind(that);
+          let opponentAttack = that.attack.bind(that);
+
           setTimeout(
-            func,
+            opponentAttack,
             2500,
             mon2.moves[Math.floor(Math.random() * 3)],
             mon2,
@@ -147,10 +127,6 @@ export default class Game {
           "\nPress OK to Play Again!"
       );
 
-      // setTimeout(() => {
-      //   alert("Game Over: " + fainted.name + " fainted!\n" + "\nPress OK to Play Again!");
-      // }, 5000);
-
       setTimeout(() => {
         location.reload();
       }, 900);
@@ -158,6 +134,25 @@ export default class Game {
   }
 
   attack(move, attacker, receiver, hp, owner) {
+    if (attacker === this.playerMonster) {
+      let playerSlash = document.getElementById("opponent-slash");
+      slashAnimation(playerSlash);
+    } else {
+      let playerSlash = document.getElementById("player-slash");
+      slashAnimation(playerSlash);
+    }
+
+    function slashAnimation(slash) {
+      slash.setAttribute("type", "hidden");
+      slash.setAttribute("src", "./src/images/interface/slash.gif");
+      setTimeout(() => {
+        slash.setAttribute(
+          "src",
+          "data:image/png;base64,R0lGODlhFAAUAIAAAP///wAAACH5BAEAAAAALAAAAAAUABQAAAIRhI+py+0Po5y02ouz3rz7rxUAOw=="
+        );
+      }, 245);
+    }
+
     // handles attacks and HP updates
     document.getElementById("commentary").innerHTML =
       "<p>" + owner + attacker.name + " used " + move[0] + "!</p>"; // says a particular pokemon has attacked and with what move
@@ -170,15 +165,6 @@ export default class Game {
       let receiverType = typeMatch[receiver.name]; // for type matching, power of a move depends on pokemon move types
       let moveType = move[1]; // type for attack being used on receiver pokemon (being attacked)
       let scale = 1;
-
-      // if (receiver === this.playerMonster) {
-      //   slash = document.getElementById("player-slash");
-      //   slash.setAttribute("src", "./src/images/interface/player_hp.png");
-      //   // new Promise(resolve => setTimeout(resolve, 500))
-      //   // slash.setAttribute("src", "");
-      // } else {
-      //   slash = document.getElementById("opponent-slash");
-      // }
 
       for (let i = 0; i < receiverType.length; i++) {
         // we adjust the power level (scale) of each move
@@ -231,5 +217,4 @@ export default class Game {
     // console.log(that);
     that.gameOver(hp); // after an attack has been made, let's check if there's a winner -- pokemon's heatlh is <= 0
   }
-
 }

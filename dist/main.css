@@ -333,30 +333,20 @@ body {
   justify-content: center;
 }
 
-#player-slash-container {
-  width: 10px;
-  height: 10px;
-}
-
 #player-slash {
   position: absolute;
-  top: 61px;
-  left: 20px;
+  top: 105px;
+  left: 50px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;
   display: flex;
   justify-content: center;
 }
 
-#opponent-slash-constainer {
-  width: 10px;
-  height: 10px;
-}
-
 #opponent-slash {
   position: absolute;
-  top: 61px;
-  left: 20px;
+  top: 30px;
+  right: 50px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;
   display: flex;

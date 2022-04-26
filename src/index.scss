@@ -90,7 +90,6 @@
 
 .linkedin {
   color: #0e76a8;
-  // background-color: white;
 }
 
 .health-bar {
@@ -118,11 +117,9 @@ body {
 .attack-buttons {
   position: absolute;
   bottom: 15px;
-  // background-color: blue;
   height: 100px;
   left: 5px;
   right: 5px;
-  // background-image: url('../src/images/interface/menu_box_overview.jpg');
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -212,11 +209,10 @@ body {
 #instructions {
   line-height: 20px;
   font-size: 12px;
-  display: flex; //enters into flex systems, then can do justify content etc
+  display: flex;
   justify-content: center;
   padding-bottom: 20px;
   p {
-    // any p inside of instructions has these property
     text-align: center;
     width: 700px;
     border: 1px solid;
@@ -262,7 +258,7 @@ body {
   right: 48.5px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;
-  display: flex; //enters into flex systems, then can do justify content etc
+  display: flex;
   justify-content: center;
 }
 
@@ -277,14 +273,9 @@ body {
   left: 20px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;
-  display: flex; //enters into flex systems, then can do justify content etc
+  display: flex;
   justify-content: center;
 }
-
-// .sound{
-//   width: 10px;
-//   height: 10px;
-// }
 
 #sound-toggle {
   background-color: transparent;
@@ -295,7 +286,6 @@ body {
   width: 10px;
   height: 10px;
   p {
-    // any p inside of instructions has this property
     color: #494949;
     font-weight: lighter;
     display: inline-block;
@@ -309,7 +299,7 @@ body {
   right: 2px;
   font-size: 8px;
   font-family: "Press Start 2P", cursive;
-  display: flex; //enters into flex systems, then can do justify content etc
+  display: flex;
   justify-content: center;
 }
 
@@ -317,7 +307,6 @@ body {
   width: 10px;
   height: 10px;
   p {
-    // any p inside of instructions has this property
     color: #494949;
     font-weight: lighter;
     display: inline-block;
@@ -331,36 +320,40 @@ body {
   left: 148px;
   font-size: 8.55px;
   font-family: "Press Start 2P", cursive;
-  display: flex; //enters into flex systems, then can do justify content etc
+  display: flex;
   justify-content: center;
 }
 
 #player-slash-container {
-  width: 10px;
-  height: 10px;
+  // width: 10px;
+  // height: 10px;
 }
 
 #player-slash {
   position: absolute;
-  top: 61px;
-  left: 20px;
+  top: 105px;
+  left: 50px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;
-  display: flex; //enters into flex systems, then can do justify content etc
+  display: flex;
   justify-content: center;
+
 }
 
 #opponent-slash-constainer {
-  width: 10px;
-  height: 10px;
+  // width: 10px;
+  // height: 10px;
 }
 
 #opponent-slash {
   position: absolute;
-  top: 61px;
-  left: 20px;
+  top: 30px;
+  right: 50px;
   font-size: 10px;
   font-family: "Press Start 2P", cursive;
-  display: flex; //enters into flex systems, then can do justify content etc
+  display: flex;
   justify-content: center;
+  
 }
+
+

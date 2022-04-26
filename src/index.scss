@@ -1,14 +1,12 @@
 #player-health {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 #opponent-health {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
-
 .attacks {
-
   justify-content: center; /* horizontal */
   align-items: center; /* vertical */
   margin: 0 auto;
@@ -30,8 +28,8 @@
   top: 65px;
   color: black;
   text-align: left;
-  font-family: 'Press Start 2P', cursive;
-  line-height: 45px;;
+  font-family: "Press Start 2P", cursive;
+  line-height: 45px;
   background-color: gray;
   left: 50%;
   transform: translateX(-50%);
@@ -41,19 +39,18 @@
 }
 
 .btn {
-    display: block;
-    border: none;
-    background-color: transparent;
-    font-family: 'Press Start 2P', cursive;
-    position: absolute;
-    width: 115px;
-    height: 25px;
-    font-size: 10.5px;
-
+  display: block;
+  border: none;
+  background-color: transparent;
+  font-family: "Press Start 2P", cursive;
+  position: absolute;
+  width: 115px;
+  height: 25px;
+  font-size: 10.5px;
 }
 
 .hp {
-  display:inline-block
+  display: inline-block;
 }
 
 #social-media {
@@ -66,25 +63,24 @@
 }
 
 #left {
-
   width: 50px;
 }
 
 #right {
-
   width: 20%;
 }
 
-.links{
+.links {
   display: flex;
   justify-content: center;
   padding-top: 5px;
   padding-bottom: 35px;
   background-color: gray;
 }
-.social-media{
-  float:center;
-  margin-left:50px;
+
+.social-media {
+  float: center;
+  margin-left: 50px;
   font-size: 50px;
 }
 
@@ -107,10 +103,9 @@ body {
 }
 
 .screen {
-
   padding: 5px;
   margin-top: 230px;
-  background-image: url('../src/images/levels/arena-forrest.jpg');
+  background-image: url("../src/images/levels/arena-forrest.jpg");
   background-repeat: no-repeat;
   width: 590px;
   border-radius: 10px;
@@ -164,7 +159,7 @@ body {
   text-align: center;
   font-size: 10px;
   line-height: 20px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 #player {
@@ -214,21 +209,21 @@ body {
   left: 78px;
 }
 
-
 #instructions {
   line-height: 20px;
   font-size: 12px;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
   padding-bottom: 20px;
-  p { // any p inside of instructions has these property
+  p {
+    // any p inside of instructions has these property
     text-align: center;
     width: 700px;
     border: 1px solid;
     border-radius: 5px;
     background-color: white;
     padding: 15px;
-    font-family: 'Press Start 2P', cursive;
+    font-family: "Press Start 2P", cursive;
   }
 }
 
@@ -266,7 +261,7 @@ body {
   top: 158.5px;
   right: 48.5px;
   font-size: 10px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
 }
@@ -281,11 +276,10 @@ body {
   top: 61px;
   left: 20px;
   font-size: 10px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
 }
-
 
 // .sound{
 //   width: 10px;
@@ -300,11 +294,12 @@ body {
 #player-level-container {
   width: 10px;
   height: 10px;
-  p { // any p inside of instructions has this property
-  color: #494949;
-  font-weight: lighter;
-  display: inline-block;
-  transform: scale(0.85, 1.40);
+  p {
+    // any p inside of instructions has this property
+    color: #494949;
+    font-weight: lighter;
+    display: inline-block;
+    transform: scale(0.85, 1.4);
   }
 }
 
@@ -313,20 +308,20 @@ body {
   top: 159.5px;
   right: 2px;
   font-size: 8px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
-
 }
 
 #opponent-level-container {
   width: 10px;
   height: 10px;
-  p { // any p inside of instructions has this property
-  color: #494949;
-  font-weight: lighter;
-  display: inline-block;
-  transform: scale(1, 1.2);
+  p {
+    // any p inside of instructions has this property
+    color: #494949;
+    font-weight: lighter;
+    display: inline-block;
+    transform: scale(1, 1.2);
   }
 }
 
@@ -335,7 +330,7 @@ body {
   top: 61.5px;
   left: 148px;
   font-size: 8.55px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
 }
@@ -350,7 +345,7 @@ body {
   top: 61px;
   left: 20px;
   font-size: 10px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
 }
@@ -365,7 +360,7 @@ body {
   top: 61px;
   left: 20px;
   font-size: 10px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   display: flex; //enters into flex systems, then can do justify content etc
   justify-content: center;
 }
